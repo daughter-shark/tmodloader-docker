@@ -1,0 +1,13 @@
+version: '3'
+services:
+  tmod:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "7777:7777"
+    network_mode: "bridge"
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ./data:/terraria
+      - ./config.txt:/terraria-server/config.txt
