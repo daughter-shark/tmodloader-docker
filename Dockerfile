@@ -4,7 +4,7 @@ ARG TMOD_VERSION=0.11.8.5
 ARG TERRARIA_VERSION=1353
 
 RUN apk update &&\
-    apk add --no-cache --virtual build curl unzip mono
+    apk add --no-cache --virtual mono build curl unzip
 
 WORKDIR /terraria-server
 
